@@ -1,7 +1,16 @@
+import Home from "./pages/Home";
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Layout from "./pages/Layout";
 function App() {
   return (
     <div className="App">
-     ssssasf
+      <BrowserRouter><Routes>
+        <Route path="/" element={<Layout></Layout>}>
+        <Route index  element={<Home></Home>}></Route>
+        </Route>
+        </Routes>
+        </BrowserRouter>
+    
     </div>
   );
 }

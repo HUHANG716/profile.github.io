@@ -1,0 +1,18 @@
+.carousel-container {
+    height: 600px;
+   
+    overflow: hidden;
+    
+    .carousel {
+        div {
+            img {
+                display: block;
+                margin: auto;
+                height: 600px;
+                
+            }
+ 
+
+        }
+    }
+}
