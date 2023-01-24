@@ -1,4 +1,5 @@
 import { ThemeProvider } from "@emotion/react";
+import { useNavigate } from "react-router-dom";
 import {
   AppBar,
   Button,
@@ -12,8 +13,22 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import CameraIcon from "@mui/icons-material/PhotoCamera";
 const theme = createTheme();
+
 const Layout = () => {
+  const navigate=useNavigate()
   const navItems = ["Home", "About Me", "Contact Me"];
+  const navigateTo=(link)=>{
+    switch(link){
+        case "About Me": 
+        navigate('/profile.github.io/about')
+        break
+        case "Contact Me": 
+        navigate('/profile.github.io/contact')
+        break
+        default :navigate('/profile.github.io/')
+    }
+
+  }
   function Copyright() {
     return (
       <Typography variant="body2" color="text.secondary" align="center">
@@ -34,13 +49,14 @@ const Layout = () => {
           <Box alignItems="center" display="flex">
             <CameraIcon sx={{ mr: 2 }} />
             <Typography variant="h6" color="inherit" noWrap>
-              Album layout
+              Lucas
             </Typography>
           </Box>
           <Box>
             {navItems.map((item) => (
-              <Button className="nav-items" variant="secondary" key={item}>
-                <Typography variant="button"> {item}</Typography>
+              <Button onClick={()=>navigateTo(item)} className="nav-items" variant="secondary" key={item}>
+              <Typography variant="button"> {item}</Typography>
+              
               </Button>
             ))}
           </Box>
