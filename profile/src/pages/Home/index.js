@@ -33,7 +33,10 @@ const home = () => {
         <Container className="carousel-container" sx={{}}>
           <Carousel className="carousel" autoplay>
             <div>
-              <img src={imgSrc}></img>
+              <img src="https://source.unsplash.com/random"></img>
+            </div>
+            <div>
+              <img src="https://source.unsplash.com/random"></img>
             </div>
             <div>
               <img src="https://source.unsplash.com/random"></img>
@@ -56,7 +59,7 @@ const home = () => {
                 <CardMedia
                   component="img"
                   sx={{
-                    // 16:9
+                    
                   
                   }}
                   image="https://source.unsplash.com/random"
