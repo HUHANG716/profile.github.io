@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter><Routes>
-        <Route path="/" element={<Layout></Layout>}>
+        <Route path="/profile.github.io" element={<Layout></Layout>}>
         <Route index  element={<Home></Home>}></Route>
         </Route>
         </Routes>
